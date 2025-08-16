@@ -5,4 +5,8 @@ from .models import Post
 
 # Create your views here.
 class PostList(generic.ListView):
-    model = Post
+    queryset = Post.objects.filter(status=1)
+    template_name = "blog/index.html"
+    # queryset = Post.objects.all().order_by("-created_on")
+    #queryset = Post.objects.filter(author=3)
+    # model = Post
