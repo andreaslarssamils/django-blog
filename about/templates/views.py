@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from .forms import CollaborateForm
 from .models import About
+from .forms import CollaborateForm
 
 
 def about_me(request):
